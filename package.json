@@ -1,24 +1,21 @@
 {
-  "name": "contenia-backend",
+  "name": "contenia-backend-1",
   "version": "1.0.0",
-  "engines": {
-    "node": "20.x"
-  },
+  "type": "commonjs",
+  "license": "MIT",
   "scripts": {
-    "build": "esbuild server/index.ts --platform=node --bundle --format=cjs --outdir=dist",
-    "start": "node dist/index.js"
+    "dev": "tsx server/index.ts",
+    "build": "tsc",
+    "start": "node dist/server/index.js"
   },
   "dependencies": {
     "express": "^4.21.2",
-    "drizzle-orm": "^0.39.1",
-    "@neondatabase/serverless": "^0.10.4",
-    "stripe": "^18.3.0",
-    "openai": "^4.98.0",
-    "ws": "^8.18.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "esbuild": "^0.25.0",
-    "typescript": "5.6.3"
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.16.11",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
   }
 }
