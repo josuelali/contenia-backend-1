@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>VENDECONIA - Generador de Contenido</title>
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9789327885520093"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <h1>🧠 VENDECONIA</h1>
+        <form method="POST">
+            <label>Tipo de contenido:</label>
+            <input
+                name="tipo"
+                placeholder="Artículo, Anuncio, Libro..."
+                required
+            /><br /><br />
+
+            <label>Tema:</label>
+            <input
+                name="tema"
+                placeholder="Ej: Cómo ganar dinero con IA"
+                required
+            /><br /><br />
+
+            <label>Estilo:</label>
+            <input
+                name="estilo"
+                placeholder="Profesional, informal..."
+                required
+            /><br /><br />
+
+            <label>Longitud (palabras):</label>
+            <input
+                type="number"
+                name="longitud"
+                value="100"
+                min="50"
+                max="1000"
+            /><br /><br />
+
+            <button type="submit">Generar contenido</button>
+        </form>
+
+        {% if resultado %}
+        <h2>📝 Resultado:</h2>
+        <p>{{ resultado }}</p>
+        {% endif %}
+    </body>
+</html>
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VendeConIA - Generador de Contenido</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f5f5f5;
+            }
+            .container {
+                background-color: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                color: #333;
+                text-align: center;
+            }
+            form {
+                margin-bottom: 30px;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            input,
+            select,
+            textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            button {
+                background-color: #007bff;
+                color: white;
+                padding: 12px 24px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            .resultado {
+                background-color: #f8f9fa;
+                border: 1px solid #e9ecef;
+                border-radius: 5px;
+                padding: 20px;
+                margin-top: 20px;
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>🚀 VendeConIA - Generador de Contenido</h1>
+
+            <form method="POST">
+                <label for="tipo">Tipo de contenido:</label>
+                <select name="tipo" id="tipo" required>
+                    <option value="">Selecciona un tipo</option>
+                    <option value="artículo">Artículo</option>
+                    <option value="post de redes sociales">
+                        Post de redes sociales
+                    </option>
+                    <option value="descripción de producto">
+                        Descripción de producto
+                    </option>
+                    <option value="email marketing">Email marketing</option>
+                    <option value="guión de video">Guión de video</option>
+                </select>
+
+                <label for="tema">Tema o producto:</label>
+                <input
+                    type="text"
+                    name="tema"
+                    id="tema"
+                    placeholder="Ej: Auriculares inalámbricos para deportistas"
+                    required
+                />
+
+                <label for="estilo">Estilo de escritura:</label>
+                <select name="estilo" id="estilo" required>
+                    <option value="">Selecciona un estilo</option>
+                    <option value="persuasivo">Persuasivo</option>
+                    <option value="informativo">Informativo</option>
+                    <option value="casual">Casual</option>
+                    <option value="profesional">Profesional</option>
+                    <option value="emocional">Emocional</option>
+                </select>
+
+                <label for="longitud">Longitud (número de palabras):</label>
+                <input
+                    type="number"
+                    name="longitud"
+                    id="longitud"
+                    min="50"
+                    max="1000"
+                    value="200"
+                    required
+                />
+
+                <button type="submit">✨ Generar Contenido</button>
+            </form>
+
+            {% if resultado %}
+            <div class="resultado">
+                <h3>📝 Contenido Generado:</h3>
+                {{ resultado }}
+            </div>
+            {% endif %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+Nombre provisional: CONTENIA – Tu generador de contenido inteligente
+Objetivo: Crear libros, artículos, descripciones de productos, guiones de video o anuncios publicitarios en minutos.
+
+⚙️ FUNCIONALIDADES PRINCIPALES (Versión básica/MVP)
+Selector de tipo de contenido:
+
+📘 Libro digital (para Amazon KDP, por capítulos).
+
+✍️ Artículo para blog (con SEO).
+
+📢 Anuncio publicitario (para redes o e-commerce).
+
+🎥 Guión para video/Reel/TikTok.
+
+🛍️ Descripción de producto (dropshipping, Amazon, etc.)
+
+Formulario simple:
+
+Tema / producto / título / objetivo del contenido.
+
+Estilo deseado (profesional, informal, divertido, vendedor...).
+
+Idioma.
+
+IA genera el contenido completo en segundos.
+
+Opción de editar y exportar en varios formatos: PDF, .docx, txt.
+
+💸 MODELO DE NEGOCIO
+Freemium:
+
+Gratis: 3 contenidos al mes.
+
+Pro (9 €/mes): ilimitado + exportar + historial guardado.
+
+Plan Agencia (19 €/mes): con marca blanca + edición avanzada + exportar en lote.
+
+Afiliación extra:
+
+Sugerencia de herramientas para monetizar (Amazon KDP, Canva, Shopify, etc.) con links de afiliado.
+
+🚀 FASE 1: VALIDACIÓN
+Vamos a preparar:
+
+Nombre definitivo.
+
+Interfaz sencilla (puede ser en Replit o como página web).
+
+Demo funcional con IA para generar un artículo o libro.
+
+¿Arrancamos con esta versión, Jefe? ¿Quieres que primero te muestre un boceto visual o empiezo ya a desarrollar la estructura básica de la app?
+
+
+
+
+
+
+
+Tú dijiste:
+vamos a empezar va
+ChatGPT Plus
+Perfecto, Jefe. Vamos a construir CONTENIA, tu app generadora de contenido con IA. Empezamos con la estructura básica paso por paso:
+
+✅ PASO 1: ESTRUCTURA DE LA APP
+Tendrá 5 secciones principales:
+
+Inicio (bienvenida y explicación breve de lo que hace la app).
+
+Formulario de contenido con estos campos:
+
+Tipo de contenido (libro, blog, anuncio, guión, producto).
+
+Tema o idea central.
+
+Público objetivo.
+
+Estilo (profesional, informal, vendedor, etc.).
+
+Longitud (corta, media, larga).
+
+Generador con IA que crea el contenido al instante.
+
+Vista previa editable con opción de descargar.
+
+Historial (solo para usuarios registrados).
+
+✅ PASO 2: HERRAMIENTAS Y TECNOLOGÍA
+Vamos a usar:
+
+Frontend: HTML + CSS + JavaScript (visual sencillo).
+
+Backend + IA: Python con Replit o Flask (conectado a GPT).
+
+Exportación: PDF y .docx con librerías como docx o pdfkit.
+
+✅ PASO 3: PRIMERA VERSIÓN FUNCIONAL
+Para comenzar ya mismo, te pr
