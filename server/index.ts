@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Logging middleware (tipado correcto, sin apply ni spreads problemáticos)
+// Logging middleware
 app.use((req: Request, res: Response, next: NextFunction) => {
   const start = Date.now();
   const path = req.path;
@@ -43,25 +43,31 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });
 
 (async () => {
-  await registerRoutes(app);
+  try {
+    await registerRoutes(app);
 
-  app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
-    const status = err?.status || err?.statusCode || 500;
-    const message = err?.message || "Internal Server Error";
-    res.status(status).json({ message });
-  });
+    app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
+      const status = err?.status || err?.statusCode || 500;
+      const message = err?.message || "Internal Server Error";
+      res.status(status).json({ message });
+    });
 
-  const server = http.createServer(app);
+    const server = http.createServer(app);
 
-  if (app.get("env") === "development") {
-    await setupVite(app, server);
-  } else {
-    serveStatic(app);
+    if (app.get("env") === "development") {
+      await setupVite(app, server);
+    } else {
+      serveStatic(app);
+    }
+
+    const PORT = process.env.PORT || 3000;
+
+    server.listen(PORT, () => {
+      log(`Server running on port ${PORT}`);
+    });
+
+  } catch (error) {
+    console.error("Fatal startup error:", error);
+    process.exit(1);
   }
-
-  const PORT = process.env.PORT || 5000;
-server.listen(PORT, () => {
-  log(`Server running on port ${PORT}`);
-});
-
-}
+})();
